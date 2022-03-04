@@ -59,7 +59,7 @@ public class AddAnimalView {
 	}
 
 	/**
-	 * Inicializa la ventana de añadir nuevos pokemons Seleccion de icono para la
+	 * Inicializa la ventana de aÃ±adir nuevos pokemons Seleccion de icono para la
 	 * ventana
 	 */
 	private void initialize() {
@@ -199,7 +199,7 @@ public class AddAnimalView {
 			public void actionPerformed(ActionEvent e) {
 
 				// mensaje de confirmacion antes de salir
-				int opcion = JOptionPane.showConfirmDialog(null, "¿Seguro que quiere Volver?", "Salir",
+				int opcion = JOptionPane.showConfirmDialog(null, "Â¿Seguro que quiere Volver?", "Salir",
 						JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 
 				if (opcion == 0) {
@@ -216,7 +216,7 @@ public class AddAnimalView {
 				for (Animales p : user.getMascotas()) {
 					// Si el numero de chip ya lo usa otro Animal
 					if (tfNumChip.getText().equals(p.getNumChip())) {
-						lblErrorMessage.setText("ERROR: El numero del Pokemon ya pertenece a otro Pokemon.");
+						lblErrorMessage.setText("ERROR: El chip del Animal ya pertenece a otro Animal.");
 						find = true;
 						break;
 					}
@@ -230,7 +230,7 @@ public class AddAnimalView {
 							|| tfSetEspecie.getText().equals("") || tfSetPeso.getText().equals("")
 							|| tfSetRaza.getText().equals("")) {
 					
-						lblErrorMessage.setText("ERROR: No puede haber campos vacíos.");
+						lblErrorMessage.setText("ERROR: No puede haber campos vacÃ­os.");
 
 					} else {
 
@@ -254,7 +254,7 @@ public class AddAnimalView {
 							
 
 							// mensaje de confirmacion de nuevo animal
-							JOptionPane.showMessageDialog(btnAdd, "Animal añadido correctamente.");
+							JOptionPane.showMessageDialog(btnAdd, "Animal aÃ±adido correctamente.");
 
 							frmAddAnimal.setVisible(false);
 							new ClinicaView(user, frmAddAnimal);
@@ -262,7 +262,7 @@ public class AddAnimalView {
 						} catch (Exception e2) {
 							// si algun campo numerico se introducen letras salta mensaje de error
 							JOptionPane.showMessageDialog(btnAdd,
-									"Datos inválidos, revisa que el peso y el número de chip sean numéricos.");
+									"Datos invÃ¡lidos, revisa que el peso y el nÃºmero de chip sean numÃ©ricos.");
 						}
 					}
 				}
